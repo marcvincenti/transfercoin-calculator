@@ -25,3 +25,7 @@ body {
 .navbar-brand img {
   float: left;
 }
+
+h1 {
+  text-align: center;
+}

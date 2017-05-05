@@ -13,12 +13,14 @@
   (go (let [response (<! (http/get url {:with-credentials? false}))]
     (when (:success response)
       (let [mn (get-in response [:body :masternodes_count])
+            reward (get-in response [:body :masternodes_reward])
             supply (get-in response [:body :available_supply])
             btc (get-in response [:body :price_btc])
             eur (get-in response [:body :price_eur])
             usd (get-in response [:body :price_usd])]
         (do
           (swap! app-state assoc-in [:calc :masternodes] mn)
+          (swap! app-state assoc-in [:calc :reward] reward)
           (swap! app-state assoc-in [:calc :supply] supply)
           (swap! app-state assoc-in [:currencies :btc] btc)
           (swap! app-state assoc-in [:currencies :eur] eur)
