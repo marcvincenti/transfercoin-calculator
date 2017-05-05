@@ -1,0 +1,27 @@
+#logo-tx {
+  max-height: 50px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#app-container {
+  padding-top: 50px;
+  flex: 1;
+}
+
+.navbar sub {
+  color: #FF0000;
+}
+
+.navbar-brand {
+  border: none;
+  padding: 0 15px;
+}
+
+.navbar-brand img {
+  float: left;
+}
