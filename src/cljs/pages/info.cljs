@@ -40,7 +40,7 @@
       [:div.panel.panel-default
         [:center.panel-heading "Master Nodes Reward"]
         [:center.panel-body
-          [:span mn-reward " TX / minute"]]]
+          [:span mn-reward " TX"]]]
       [:div.panel.panel-default
         [:center.panel-heading "Expected Monthly Revenue"]
         [:center.panel-body
