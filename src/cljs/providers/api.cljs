@@ -12,6 +12,7 @@
         "BTC" "฿"
         ""))
 (def ^:private url "https://318h5of2kh.execute-api.eu-west-1.amazonaws.com/dev/currency/tx")
+(def mn-history-json (str url "/history"))
 
 (defn update-data
   "Load masternodes data from the blockchain"

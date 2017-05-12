@@ -1,4 +1,5 @@
 /*.log
 /target
 /*-init.clj
-/resources/public/js
+/resources/public/js/out
+/resources/public/js/app.js
