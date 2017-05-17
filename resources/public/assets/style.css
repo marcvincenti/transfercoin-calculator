@@ -13,10 +13,6 @@ body {
   flex: 1;
 }
 
-.navbar sub {
-  color: #FF0000;
-}
-
 .navbar-brand {
   border: none;
   padding: 0 15px;

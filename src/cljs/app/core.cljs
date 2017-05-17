@@ -8,7 +8,8 @@
             [app.state :refer [app-state]]
             [components.menu-bar :as menu-bar]
             [providers.api :as api]
-            [pages.info :as info]))
+            [pages.info :as info]
+            [pages.staking :as staking]))
 
 ;Adding Browser History
 (defn hook-browser-navigation! []
@@ -23,11 +24,13 @@
 (defn app-routes []
   (secretary/set-config! :prefix "#")
   (defroute "/" [] (swap! app-state assoc :page :info))
+  (defroute "/staking" [] (swap! app-state assoc :page :staking))
   (hook-browser-navigation!))
 
 ;Current-page multimethod : return which page to display based on app-state
 (defmulti current-page #(@app-state :page))
 (defmethod current-page :info [] [info/component])
+(defmethod current-page :staking [] [staking/component])
 (defmethod current-page :default  [] [:div])
 
 ;Root function to run cljs app

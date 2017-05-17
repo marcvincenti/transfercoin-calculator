@@ -20,8 +20,7 @@
 
     [:ul {:class "nav navbar-nav"}
       [:li (active? :info) [:a {:href "#/"} "Masternodes"]]
-      [:li [:a {:target "_blank" :href "https://docs.google.com/forms/d/e/1FAIpQLSdzlYN3CGdHr-qRdH5IVmbeTFDsRenDQ36EhrSpSXYgRYxsVw/viewform"} "API " [:sub "beta"]]]
-      [:li [:a {:target "_blank" :href "https://docs.google.com/forms/d/1_NUGLWjWjujyYGiTylLmlyBa-BSvens6tKCsPSGUxR8/viewform"} "Hosting " [:sub "beta"]]]]
+      [:li (active? :staking) [:a {:href "#/staking"} "Staking"]]]
 
     [:form.navbar-form.navbar-right
         [:select.form-control {:value (get @app-state :currency)
